@@ -1,0 +1,77 @@
+{
+  "name": "AI速记",
+  "appid": "",
+  "versionName": "0.1.0",
+  "versionCode": "1",
+  "transformPx": false,
+  "app-plus": {
+    "darkmode": true,
+    "themeLocation": "theme.json",
+    "safearea": { "background": "#FFFEF9", "backgroundDark": "#1E282A" },
+    "modules": { "SQLite": {}, "Record": {} },
+    "distribute": {
+      "icons": {
+        "android": {
+          "mdpi": "static/app-icons/android-48.png",
+          "hdpi": "static/app-icons/android-72.png",
+          "xhdpi": "static/app-icons/android-96.png",
+          "xxhdpi": "static/app-icons/android-144.png",
+          "xxxhdpi": "static/app-icons/android-192.png"
+        },
+        "ios": {
+          "appstore": "static/app-icons/ios-1024.png",
+          "iphone": {
+            "app@2x": "static/app-icons/ios-120.png",
+            "app@3x": "static/app-icons/ios-180.png",
+            "spotlight@2x": "static/app-icons/ios-80.png",
+            "spotlight@3x": "static/app-icons/ios-120.png",
+            "settings@2x": "static/app-icons/ios-58.png",
+            "settings@3x": "static/app-icons/ios-87.png",
+            "notification@2x": "static/app-icons/ios-40.png",
+            "notification@3x": "static/app-icons/ios-60.png"
+          },
+          "ipad": {
+            "app": "static/app-icons/ios-76.png",
+            "app@2x": "static/app-icons/ios-152.png",
+            "proapp@2x": "static/app-icons/ios-167.png",
+            "spotlight": "static/app-icons/ios-40.png",
+            "spotlight@2x": "static/app-icons/ios-80.png",
+            "settings": "static/app-icons/ios-29.png",
+            "settings@2x": "static/app-icons/ios-58.png",
+            "notification": "static/app-icons/ios-20.png",
+            "notification@2x": "static/app-icons/ios-40.png"
+          }
+        }
+      },
+      "android": {
+        "permissions": [
+          "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" android:maxSdkVersion=\"28\"/>",
+          "<uses-permission android:name=\"android.permission.SCHEDULE_EXACT_ALARM\"/>",
+          "<uses-permission android:name=\"android.permission.POST_NOTIFICATIONS\"/>",
+          "<uses-permission android:name=\"android.permission.USE_FULL_SCREEN_INTENT\"/>",
+          "<uses-permission android:name=\"android.permission.VIBRATE\"/>",
+          "<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>"
+        ]
+      },
+      "ios": {
+        "privacyDescription": {
+          "NSPhotoLibraryAddUsageDescription": "将你导出的思维导图图片保存到相册。",
+          "NSPhotoLibraryUsageDescription": "将你选择导出的思维导图保存到系统相册。",
+          "NSMicrophoneUsageDescription": "按住说话时录制你的想法，松开后将录音发送到转写服务。"
+        }
+      }
+    },
+    "usingComponents": true,
+    "nvueStyleCompiler": "uni-app",
+    "compilerVersion": 3,
+    "splashscreen": {
+      "alwaysShowBeforeRender": true,
+      "waiting": true,
+      "autoclose": true,
+      "delay": 0
+    }
+  },
+  "h5": { "darkmode": true, "themeLocation": "theme.json" },
+  "uniStatistics": { "enable": false },
+  "vueVersion": "3"
+}

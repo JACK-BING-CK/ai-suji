@@ -1,0 +1,4 @@
+{
+  "frameworks": ["libsqlite3.tbd"],
+  "deploymentTarget": "12.0"
+}

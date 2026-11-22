@@ -1,0 +1,15 @@
+{
+  "id": "suji-reminders",
+  "displayName": "AI速记本地提醒",
+  "version": "1.0.0",
+  "description": "在设备上注册日程通知和闹钟。",
+  "engines": {
+    "HBuilderX": "^4.25.0"
+  },
+  "dcloudext": {
+    "type": "uts"
+  },
+  "uni_modules": {
+    "dependencies": []
+  }
+}

@@ -1,0 +1,2 @@
+/** 系统入口异步返回一次 JSON 结果。 */
+export type InvokeSystem = (operation: string, payload: string, callback: (result: string) => void) => void

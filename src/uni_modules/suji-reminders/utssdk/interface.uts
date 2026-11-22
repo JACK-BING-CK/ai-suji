@@ -1,0 +1,2 @@
+/** 原生操作回复一次，结果以 JSON 跨越 App-Plus 的原生桥。 */
+export type InvokeReminder = (operation: string, payload: string, callback: (result: string) => void) => void

@@ -1,0 +1,11 @@
+# AI速记 开发规范
+- 产品：AI速记，手机 APP（安卓+iOS）。主线：速记想法→AI扩写思路→联网找题材→AI拆流程→转日程→闹钟提醒。
+- 技术栈（不可更改）：前端 uni-app + Vue3 + TypeScript + Pinia，打包 App-Plus；本地存储 SQLite（本地优先，断网可用）；后端 Node.js + Express + TypeScript + MySQL。
+- 分层：pages 只做展示与交互；业务逻辑在 services；数据访问在 repositories（本地库）/ api（后端请求）；页面禁止直接写 SQL 或拼 HTTP 请求。
+- 安全：所有 API Key、密钥、数据库密码只放后端.env，前端代码和仓库中禁止出现；接口必须校验 JWT；所有数据查询强制带 user_id 条件做隔离。
+- 代码规范：ESLint + Prettier + TypeScript strict；禁止滥用 any（确需使用要写注释）；命名用英文，注释用中文，只写必要注释；函数单一职责。
+- 数据约定：所有表含 id、created_at、updated_at；删除一律软删除（deleted_at）；时间统一存 UTC 毫秒时间戳，展示层转本地时间；id 用 UUID。
+- 错误处理：所有异步调用必须 try/catch，失败给用户可读提示，禁止静默吞错；网络请求统一封装，超时 15 秒，按错误码处理。
+- 双端差异（安卓/iOS）必须用条件编译隔离，并在代码中注明平台差异原因。
+- 交付格式：每次完成任务后输出三部分——；只做本次交代的范围，不擅自扩展功能；输出从简，不复述代码。
+- 详细数据模型、接口清单、AI 输出结构见 docs/SPEC.md，动手前先读相关章节。

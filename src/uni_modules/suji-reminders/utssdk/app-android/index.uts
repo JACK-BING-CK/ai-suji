@@ -1,0 +1,5 @@
+import { ReminderNative } from 'app.suji.reminders'
+
+export function invokeReminder(operation : string, payload : string, callback : (result : string) => void) : void {
+  ReminderNative.invoke(UTSAndroid.getAppContext(), UTSAndroid.getUniActivity(), operation, payload, (result : string) => callback(result))
+}

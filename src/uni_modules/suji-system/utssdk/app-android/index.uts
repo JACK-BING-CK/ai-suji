@@ -1,0 +1,5 @@
+import { SystemNative } from 'app.suji.systementry'
+
+export function invokeSystem(operation : string, payload : string, callback : (result : string) => void) : void {
+  SystemNative.invoke(UTSAndroid.getAppContext(), operation, payload, (result : string) => callback(result))
+}

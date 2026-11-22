@@ -1,0 +1,15 @@
+import { UIApplication } from 'UIKit'
+import { InvokeReminder } from '../interface.uts'
+
+// iOS 冷启动必须在系统交付用户点击操作前安装通知委托。
+export class SujiLocalNotificationHook implements UTSiOSHookProxy {
+  // UIKit 启动参数为系统异构字典，回调签名由 DCloud 固定。
+  applicationDidFinishLaunchingWithOptions(application: UIApplication | null, launchOptions: Map<UIApplication.LaunchOptionsKey, any> | null = null): boolean {
+    SujiLocalNotifications.install()
+    return true
+  }
+}
+
+export const invokeReminder: InvokeReminder = function(operation: string, payload: string, callback: (result: string) => void) {
+  SujiLocalNotifications.invoke(operation, payload, callback)
+}

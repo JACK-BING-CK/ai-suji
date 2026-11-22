@@ -1,0 +1,34 @@
+{
+  "light": {
+    "navText": "black",
+    "background": "#F3F6FC",
+    "surface": "#FFFFFF",
+    "muted": "#586782",
+    "primary": "#3054BD",
+    "border": "black",
+    "record": "static/tab-icons/record-light.png",
+    "recordSelected": "static/tab-icons/record-light-selected.png",
+    "ideas": "static/tab-icons/ideas-light.png",
+    "ideasSelected": "static/tab-icons/ideas-light-selected.png",
+    "schedule": "static/tab-icons/schedule-light.png",
+    "scheduleSelected": "static/tab-icons/schedule-light-selected.png",
+    "mine": "static/tab-icons/mine-light.png",
+    "mineSelected": "static/tab-icons/mine-light-selected.png"
+  },
+  "dark": {
+    "navText": "white",
+    "background": "#10182A",
+    "surface": "#19243A",
+    "muted": "#A9B8D5",
+    "primary": "#ADBEFF",
+    "border": "white",
+    "record": "static/tab-icons/record-dark.png",
+    "recordSelected": "static/tab-icons/record-dark-selected.png",
+    "ideas": "static/tab-icons/ideas-dark.png",
+    "ideasSelected": "static/tab-icons/ideas-dark-selected.png",
+    "schedule": "static/tab-icons/schedule-dark.png",
+    "scheduleSelected": "static/tab-icons/schedule-dark-selected.png",
+    "mine": "static/tab-icons/mine-dark.png",
+    "mineSelected": "static/tab-icons/mine-dark-selected.png"
+  }
+}

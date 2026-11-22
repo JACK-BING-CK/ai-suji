@@ -1,0 +1,22 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 权限统一在应用的 src/manifest.json 声明。
+         SCHEDULE_EXACT_ALARM 用于在设备休眠时按指定时间唤醒。
+         POST_NOTIFICATIONS 用于展示日程通知及闹钟操作按钮。
+         USE_FULL_SCREEN_INTENT 用于锁屏时打开用户设置的闹钟。
+         VIBRATE 用于闹钟持续震动。
+         RECORD_AUDIO 供记录页按住说话使用。 -->
+    <application>
+        <!-- 精确提醒由系统持有。普通进程被回收后，系统仍能创建本机接收器。 -->
+        <receiver android:name="app.suji.reminders.ReminderReceiver" android:exported="false" />
+        <activity android:name="app.suji.reminders.AlarmActivity"
+            android:theme="@android:style/Theme.Material.Light.NoActionBar"
+            android:showWhenLocked="true" android:turnScreenOn="true"
+            android:taskAffinity="" android:excludeFromRecents="true"
+            android:exported="false" />
+        <!-- 直接由用户的通知点击启动 Activity，兼容 Android 12 通知跳板限制。 -->
+        <activity android:name="app.suji.reminders.ReminderActionActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:noHistory="true" android:excludeFromRecents="true"
+            android:taskAffinity="" android:exported="false" />
+    </application>
+</manifest>

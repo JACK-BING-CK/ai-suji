@@ -1,0 +1,10 @@
+{
+  "singleQuote": true,
+  "semi": false,
+  "overrides": [
+    {
+      "files": ["src/manifest.json", "src/pages.json"],
+      "options": { "parser": "jsonc", "trailingComma": "none" }
+    }
+  ]
+}

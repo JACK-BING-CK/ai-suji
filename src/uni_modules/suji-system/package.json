@@ -1,0 +1,15 @@
+{
+  "id": "suji-system",
+  "displayName": "AI速记系统分享与桌面小组件",
+  "version": "1.0.0",
+  "description": "连接系统分享、桌面待办与本机收集箱。",
+  "engines": {
+    "HBuilderX": "^4.25.0"
+  },
+  "dcloudext": {
+    "type": "uts"
+  },
+  "uni_modules": {
+    "dependencies": []
+  }
+}

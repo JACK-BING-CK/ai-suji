@@ -1,0 +1,46 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+.DS_Store
+dist
+unpackage
+.env
+.env.*
+!.env.example
+*.local
+
+# Private device test records, local data, and signing artifacts
+/tests/evidence/
+/src/static/logo.png
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+*.db
+*.db-*
+*.apk
+*.aab
+*.ipa
+*.jks
+*.keystore
+*.mobileprovision
+*.p8
+*.p12
+*.pfx
+*.pem
+*.key
+
+# Editor directories and files
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

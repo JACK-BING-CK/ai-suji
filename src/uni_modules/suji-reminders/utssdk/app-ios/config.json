@@ -1,0 +1,4 @@
+{
+  "frameworks": ["UserNotifications.framework"],
+  "deploymentTarget": "12.0"
+}

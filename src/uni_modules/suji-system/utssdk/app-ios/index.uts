@@ -1,0 +1,15 @@
+import { UIApplication } from 'UIKit'
+import { URL } from 'Foundation'
+import { InvokeSystem } from '../interface.uts'
+
+export class SujiWidgetLinkHook implements UTSiOSHookProxy {
+  // iOS 由 UIKit 交付宿主 URL；先持久登记，页面栈就绪后再确认消费。
+  // options 是系统回调提供的异构字典，UTS 协议要求使用 any。
+  applicationOpenURLOptions(app: UIApplication | null, url: URL, options: Map<UIApplication.OpenURLOptionsKey, any> | null = null): boolean {
+    return SujiSystemNative.openURL(url.absoluteString)
+  }
+}
+
+export const invokeSystem: InvokeSystem = function (operation: string, payload: string, callback: (result: string) => void) {
+  SujiSystemNative.invoke(operation, payload, callback)
+}
